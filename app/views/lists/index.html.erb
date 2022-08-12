@@ -1,14 +1,15 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg);">
   <div class="container">
-    <h1>Le Movies</h1>
+    <h1>LeMovies</h1>
     <p>Save any kind of movies!</p>
 
   </div>
 </div>
 
+
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
 
-    <h1>Save a movie with Adou!</h1>
+    <h1>Save your movie with LeMovies</h1>
   </div>
 </div>
     <h3 class="mb-0">My Lists</h3>
@@ -18,10 +19,10 @@
     <% @lists.each do |list| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <%= link_to list_path(list), class:"text-decoration-none" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
-
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.wallpapersafari.com/19/73/LVySch.jpg) %>)">
+          <div >
             <%= list.name %>
-             <a class="dropdown-item" data-turbo-method="delete" href="#">delete</a>
+
           </div>
         <% end %>
       </div>
