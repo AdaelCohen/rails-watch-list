@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-  lass moviesController < ApplicationController
   def create
     @movie = movie.new(movie_params)
     @list = List.find(params[:list_id])
