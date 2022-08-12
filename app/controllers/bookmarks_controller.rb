@@ -4,7 +4,7 @@ class BookmarksController < ApplicationController
   end
 
   def new
-    @list = List.find(params[:list_id])
+    @bookmark = List.find(params[:list_id])
     @bookmark = Bookmark.new
   end
 
@@ -14,7 +14,9 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    @list.destroy
-    redirect_to lists_url, notice: "list was successfully destroyed."
+    @bookmark.destroy
+    redirect_to bookmarks_url, notice: "bookmark was successfully destroyed."
   end
 end
+
+heroku create watchlist1 --region us
