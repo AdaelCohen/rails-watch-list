@@ -1,1 +1,30 @@
-<h1>hello index list</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Le Movies</h1>
+    <p>Change your life and learn how to watch a movie by yourself.</p>
+
+  </div>
+</div>
+
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+
+    <h1>Save a movie with Adou!</h1>
+  </div>
+</div>
+    <h3 class="mb-0">My Lists</h3>
+    <%= link_to "CREATE YOUR MOVIE LIST", new_list_path, class: "btn btn-flat" %>
+  </div>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to list_path(list), class:"text-decoration-none" do %>
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
+
+            <%= list.name %>
+             <a class="dropdown-item" data-turbo-method="delete" href="#">delete</a>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
